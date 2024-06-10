@@ -88,8 +88,23 @@ section {
 .notes {
     display: flex;
     flex-direction: column;
-    }
-    
+}
+
+#note {
+    padding: 40px 0 200px 10px ;
+    height: 100vh;
+    line-height: 40px;
+    overflow: scroll;
+    /* padding: 40px 0 200px 10px; */
+}
+
+#note ul, #note li{
+    margin: 0 0 0 10px;
+}
+
+#note img {
+    max-width: 100%;
+}
 .note {
     border: 1px solid;
     padding: 8px;
@@ -97,19 +112,16 @@ section {
     /* border-radius: 20px ; */
     margin: 4px;
     transition: all .1s ease ;
-    
-    }
-    
-    #note {
-    min-height: 100vh;
+    opacity: .9;
+    background: rgb(255, 255, 255);
     
 }
 
 .note:hover {
     scale: 1.002;
-    margin: 10px;
+    /* margin: 10px; */
     border: 1px solid palevioletred;
-    background: transparent;
+    opacity: 1.2;
 }
 
 .notetitle {
@@ -137,7 +149,7 @@ section {
     display: flex;
     flex-grow: 1;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
     font-weight: bolder;
 }
 
@@ -147,7 +159,12 @@ section {
     padding: 4px;
     border-radius: 20px;
     max-height: max-content;
-    
+    margin: 2px;
+    border: 2px solid transparent;
+}
+
+.notetags span:hover {
+    border: 2px solid;
 }
 
 .notetime {
